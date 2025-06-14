@@ -10,6 +10,8 @@ HTTP/2 is **binary, multiplexed, and more efficient**. It improves web performan
 
 ## 🔁 HTTP/2 vs. HTTP/1.1 (and HTTP/1.0)
 
+See Diagram [here](https://github.com/Emmanuerl/h2-guide/blob/main/COMPARE.md)
+
 | Feature                    | HTTP/1.0 | HTTP/1.1             | HTTP/2                     |
 | -------------------------- | -------- | -------------------- | -------------------------- |
 | Protocol Type              | Text     | Text                 | **Binary**                 |
