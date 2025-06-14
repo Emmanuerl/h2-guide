@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package products;
+
+service ProductService {
+  rpc CreateProduct (Product) returns (Product);
+  rpc ReadProduct (ProductId) returns (Product);
+  rpc ReadProducts (None) returns (Products);
+  rpc UpdateProduct(Product) returns (Product);
+  rpc DeleteProduct (ProductId) returns (DeleteProductResponse);
+}
+
+message None {}
+
+message ProductId {
+  int32 id = 1;
+}
+
+enum  Category {
+  SMARTPHONE = 0;
+  CAMERA = 1;
+}
+
+message Product {
+  int32 id = 1;
+  optional string name = 2;
+  string description = 3;
+  float price = 4;
+  Category category = 5;
+}
+
+message Products {
+  repeated Product products = 1;
+}
+
+message DeleteProductResponse {
+  bool deleted = 1;
+}
